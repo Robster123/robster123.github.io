@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Weiterleitung…</title>
+</head>
+<body>
+  <p>Bitte warten… Falls du nicht automatisch weitergeleitet wirst, klicke:</p>
+  <p><a id="manual" href="#">Weiter</a></p>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const links = [
-        "https://www.youtube.com/watch?v=hcnEfb9Qoc4",
-        "https://www.youtube.com/watch?v=IhAXXY4SqW0"
-      ];
+    const links = [
+      "https://www.youtube.com/watch?v=hcnEfb9Qoc4",
+      "https://www.youtube.com/watch?v=IhAXXY4SqW0"
+    ];
+    const randomLink = links[Math.floor(Math.random() * links.length)];
 
-      const randomLink = links[Math.floor(Math.random() * links.length)];
-      window.location.replace(randomLink);
-    });
+    // Fallback-Link
+    document.getElementById("manual").href = randomLink;
+
+    // Auto-Redirect
+    setTimeout(() => window.location.replace(randomLink), 200);
   </script>
-</head>
-
-<body>
-  <p>Bitte warten…</p>
 </body>
 </html>
