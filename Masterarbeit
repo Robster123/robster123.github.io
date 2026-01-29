@@ -3,8 +3,8 @@
 <head>
   <script>
     const links = [
-      "https://www.soscisurvey.de/admin/index.php?o=Questionnaire&a=edit&id=1126298",
-      "https://docs.google.com/document/d/1SQ-ZRsTvybtJl2WuSrLBdUgwbal4K8mOPDioUUYMOks/edit?tab=t.0"
+      "https://www.youtube.com/watch?v=hcnEfb9Qoc4",
+      "https://www.youtube.com/watch?v=IhAXXY4SqW0"
     ];
     const randomLink = links[Math.floor(Math.random() * links.length)];
     window.location.href = randomLink;
